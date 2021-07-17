@@ -3,12 +3,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "build-css": "tailwindcss build -i css/tailwind.css -o css/styles.css --watch"
   },
   "devDependencies": {
+    "tailwindcss": "^2.2.4",
     "vite": "^2.4.0"
   },
-  "dependencies": {
-    "bootstrap": "^5.0.2"
-  }
+  "dependencies": {}
 }

@@ -1,16 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div class="">
-      <h1 class="container-fluid text-primary">Hello Vite!</h1>
-      <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>`
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Weather App</title>
+</head>
+
+<body style="display: none" onload="document.body.removeAttribute('style');">
+
+<nav class="flex gap-2 my-1.5 justify-center">
+    <button class="h-10 px-3   border-2  rounded-3xl ">Current</button>
+    <button class="h-10 px-3   border-2  rounded-3xl ">Today</button>
+    <button class="h-10 px-3   border-2  rounded-3xl ">Tomorrow</button>
+    <button class="h-10 px-3   border-2  rounded-3xl ">Week</button>
+</nav>
+<div class="flex justify-center">
+    <div class="flex items-center  bg-blue-100 justify-center border-2 border-blue-300 rounded-3xl">
+        <div class="flex  items-center  opacity-0 transition ease-in duration-200 " id="current-weather">
+            <div class="p-7">
+                <div>
+                    <img src="./icon/04d@2x.png" alt="weather icon" class="border rounded-3xl border-black bg-white"
+                         data-weather-id="icon">
+                    <span data-weather-id="description" class="capitalize mt-10"></span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <img src="./icon/cloud.svg" alt="cloudiness" class="icon">
+                    <span>Cloudiness</span>
+                    <span data-weather-id="clouds">%%</span>
+                    <span>%</span>
+                </div>
+            </div>
+            <div class="p-7">
+                <span data-weather-id="city"></span>
+                <span data-weather-id="dt"></span>
+                <div class="flex items-center gap-1">
+                    <img src="./icon/temp.svg" alt="temperature" class="icon">
+                    <span>Temperature</span>
+                    <span data-weather-id="temp"></span>
+                    <span>&#176C</span>
+                </div>
+
+                <div class="flex items-center gap-1">
+                    <img src="./icon/feelsLike.svg" alt="feelslike" class="icon">
+                    <span>Feels like</span>
+                    <span data-weather-id="feels_like"></span>
+                    <span>&#176C</span>
+                </div>
+
+                <div class="flex items-center gap-1">
+                    <img src="./icon/humidity.svg" alt="humidity" class="icon">
+                    <span>Humidity</span>
+                    <span data-weather-id="humidity"></span>
+                    <span>%</span>
+                </div>
+
+
+                <div class="flex items-center gap-1">
+                    <img src="./icon/wind.svg" alt="wind" class="icon">
+                    <span>Wind</span>
+                    <span data-weather-id="wind_speed"></span>
+                    <span>m/s</span>
+                </div>
+
+                <div class="flex items-center gap-1">
+                    <img src="./icon/rain.svg" alt="rain" class="icon">
+                    <span>Rain volume</span>
+                    <span data-weather-id="rain"></span>
+                    <span>mm</span>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+</div>
+
+
+</body>
 </html>
+<script type="module" src="/main.js"></script>
